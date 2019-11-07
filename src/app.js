@@ -32,8 +32,7 @@ watched(e){
     //var str = e.target.previousSibling.innerHTML;
     console.log(e.target.parentNode.innerHTML);
     var str = e.target.parentNode.innerHTML;
-   
-    str.slice(0,(str.length-24))
+    str = str.slice(0,(str.length-24))
    console.log(typeof str);
     for (var i=0; i<movies.length; i++){
         console.log('in for loop');
@@ -41,13 +40,11 @@ watched(e){
         console.log(str);
         if (movies[i].title === str){
             console.log('in if statement');
-            
             watchedMovies.push(movies[i]);
-            //movies.splice(i, 1);  
+            movies.splice(i, 1);  
              
         }
     }
-    //movies.pop();
     this.setState({
         movieList: movies
     });
