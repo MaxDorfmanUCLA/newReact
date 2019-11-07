@@ -3,8 +3,7 @@ var Search = (props) => {
     console.log(props)
     return  (<div>
             <form>
-                <input type="text"></input>
-                
+                <input type="text" placeholder="Search..."></input>   
             </form>
             <button onClick={(e) => {props.updateFn(e)}}>Go!</button>
             </div>

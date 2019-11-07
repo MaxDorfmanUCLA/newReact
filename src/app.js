@@ -1,12 +1,7 @@
 import React from '../node_modules/react';
 import Search from './search.js';
-var movies = [
-    {title: 'Mean Girls'},
-    {title: 'Hackers'},
-    {title: 'The Grey'},
-    {title: 'Sunshine'},
-    {title: 'Ex Machina'}
-  ];
+import Add from './add.js';
+var movies = [];
 class App extends React.Component {
     constructor(props){
         super(props);
@@ -14,7 +9,18 @@ class App extends React.Component {
             movieList: movies
         }
         this.updateState = this.updateState.bind(this);
+        this.addMovie = this.addMovie.bind(this);
     }
+addMovie(e){
+    e.preventDefault();
+    console.log("movie added");
+    var str = e.target.previousSibling.firstChild.value;
+    movies.push({title: str})
+    this.setState({
+        movieList: movies
+    });
+}
+
 updateState(e){
     e.preventDefault();
     console.log("i got clicked");
@@ -34,6 +40,7 @@ updateState(e){
 
 render(){
     return  (<div>
+                <Add addFn={this.addMovie}/>
                 <Search updateFn={this.updateState}/>
                 <ol>
                     {this.state.movieList.map((item, i) => {
