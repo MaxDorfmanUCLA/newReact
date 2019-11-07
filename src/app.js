@@ -10,12 +10,26 @@ class App extends React.Component {
         super(props);
         this.state = {
             movieList: movies,
-            watchedMovieList: watchedMovies
         }
         this.updateState = this.updateState.bind(this);
         this.addMovie = this.addMovie.bind(this);
         this.watched = this.watched.bind(this);
     }
+
+showWatched(){
+    console.log("showing watched movies");
+    this.setState({
+        movieList: watchedMovies
+    });
+}
+
+showUnwatched(){
+    console.log("showing unwatched movies");
+    this.setState({
+        movieList: movies
+    });
+}
+
 addMovie(e){
     e.preventDefault();
     console.log("movie added");
@@ -26,10 +40,9 @@ addMovie(e){
     });
 }
 
+
+
 watched(e){
-    //24
-    //console.log(e.target.previousSibling.innerHTML);
-    //var str = e.target.previousSibling.innerHTML;
     console.log(e.target.parentNode.innerHTML);
     var str = e.target.parentNode.innerHTML;
     str = str.slice(0,(str.length-24))
@@ -41,13 +54,13 @@ watched(e){
         if (movies[i].title === str){
             console.log('in if statement');
             watchedMovies.push(movies[i]);
-            movies.splice(i, 1);  
-             
+            movies.splice(i, 1);     
         }
     }
     this.setState({
         movieList: movies
     });
+    
 }
 
 updateState(e){
@@ -71,11 +84,11 @@ render(){
     return  (<div>
                 <Add addFn={this.addMovie}/>
                 <Search updateFn={this.updateState}/>
-                <div><button>Watched</button><button>Unwatched</button></div>
+                <div><button onClick={() => {this.showWatched()}}>Watched</button><button onClick={() => {this.showUnwatched()}}>Unwatched</button></div>
                 <ul>
                     {this.state.movieList.map((item, i) => {
                         return (<div>
-                        <li key={i}>{item.title}<WatchedButton watchedFn={this.watched}/></li>
+                        {this.state.movieList === watchedMovies ? <li key={i}>{item.title}</li> : <li key={i}>{item.title}<WatchedButton watchedFn={this.watched}/></li>}
                         </div>
                         );
                     })}
