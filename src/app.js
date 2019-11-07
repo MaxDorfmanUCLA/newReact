@@ -18,8 +18,17 @@ class App extends React.Component {
 updateState(e){
     e.preventDefault();
     console.log("i got clicked");
+    console.log(e.target.previousSibling.firstChild.value);
+    var str = e.target.previousSibling.firstChild.value;
+    var movieMatch = [];
+    for (var m of movies){
+        console.log('m', m);
+        if (m.title.includes(str)){
+            movieMatch.push(m);
+        }
+    }
     this.setState({
-        movieList: ['searchedMovie', 'hello']
+        movieList: movieMatch
     });
 }
 
