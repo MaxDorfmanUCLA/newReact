@@ -63,10 +63,10 @@ render(){
           </div>
           <div class="modal-body">
             <form>
-              <input class="create-input" type="text"  placeholder="Post Title"></input><br></br>
-              <input class="create-input" type="text"  placeholder="Author"></input><br></br>
-              <input class="create-input" type="text"  placeholder="Image URL"></input><br></br>
-              <textarea class="create-body-textarea"  placeholder="Post Body"></textarea><br></br>
+              <input class="create-input" type="text" placeholder="Post Title"></input><br></br><br></br>
+              <input class="create-input" type="text" placeholder="Author"></input><br></br><br></br>
+              <input class="create-input" type="text" placeholder="Image URL"></input><br></br><br></br>
+              <textarea class="create-body-textarea" placeholder="Post Body"></textarea><br></br><br></br>
               <button class="create-submit-button" onClick={(e) => {this.handleSubmit(e)}}>Save post</button>
             </form>
           </div>
