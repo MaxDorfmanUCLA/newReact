@@ -4,9 +4,16 @@ import Post from './post.js';
 class App extends React.Component {
     constructor(props){
         super(props);
+        this.state = {
+            alert: false
+        }
     }
 
 render(){
+    var alertMessage = <p></p>
+    if (this.state.alert === true){
+        alertMessage = <p>Only administrators can make new blog posts</p>
+    }
     return  (<div>
                 <div class="row">
                     <div class="leftcolumn">
@@ -26,8 +33,12 @@ render(){
                             <div class="fakeimg2">Image</div>
                         </div>
                         <div class="card">
-                            <h3>Follow Me</h3>
-                            <p>Some text..</p>
+                            <form action="/action_page.php">
+                                <input type="text" id="uname" value="Username..."></input><br></br><br></br>
+                                <input type="text" id="pword" value="Password..."></input><br></br><br></br>
+                                <button onClick={(e) => {this.setState({alert: true})}}>New Post</button>
+                            </form> 
+                            {alertMessage}
                         </div>
                     </div>
                 </div>
