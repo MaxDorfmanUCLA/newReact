@@ -16,30 +16,43 @@ body {
   float: right;
   width: 25%;
   padding-left: 20px;
-  margin-top: -900px;
+  margin-top: 60px;
+  
 }
 
  /* Fake image */
  .fakeimg1 {
   background-color: #aaa;
-  width: 95.7%;
+  width: 100%;
   padding: 20px;
   height: 200px;
 }
 
 .fakeimg2 {
   background-color: #aaa;
-  width: 84%;
+  width: 100%;
   padding: 20px;
 }
 
-
-/* Add a card effect for articles */
+.h1, .h2, .h3, h1, h2, h3 {
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  
+    
+    line-height: 1.3;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: none;
+    text-decoration: none;
+    font-size: 25px;
+  /* font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; */
+}
+  /* Add a card effect for articles */
 .card {
   background-color: white;
   padding: 20px;
   margin-top: 20px;
-  margin-right: 20px;
+  margin-right: -10px;
+  margin-left: 20px;
 }
 
 
