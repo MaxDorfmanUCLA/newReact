@@ -7,6 +7,7 @@ class App extends React.Component {
         super(props);
         this.state = {
             alert: false,
+            adminPost: false,
             blogs: [1,2,3]
         }
     }
@@ -22,8 +23,12 @@ class App extends React.Component {
 
 render(){
     var alertMessage = <p></p>
+    var newPost = <p></p>
     if (this.state.alert === true){
-        alertMessage = <p>Only administrators can make new blog posts</p>
+        alertMessage = <p class="alert1">Only administrators can make new blog posts!</p>
+    } 
+    if (this.state.adminPost === true) {
+        newPost = <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">New Post</button>
     }
     return  (<div>
                 <div class="row">
@@ -46,9 +51,9 @@ render(){
                         </div>
                         <div class="card">
                             <form action="/action_page.php">
-                                <input type="text" id="uname" placeholder="Username..."></input><br></br><br></br>
-                                <input type="text" id="pword" placeholder="Password..."></input><br></br><br></br>
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" onClick={(e) => {e.preventDefault(); this.setState({alert: true});}}>New Post</button><br></br>
+                                <input type="text" id="pword" placeholder="Admin Password..."></input><br></br><br></br>
+                                <button type="button" onClick={(e) => {e.preventDefault(); var txt = e.target.previousSibling.previousSibling.previousSibling.value; if (txt!=="PVTadmin1") {this.setState({alert: true});} else{this.setState({adminPost: true, alert: false})}}}>Admin Sign in</button><br></br><br></br>
+                                {newPost}
                             </form><br></br>
                             {alertMessage}
                         </div>
