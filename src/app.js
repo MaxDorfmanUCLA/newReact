@@ -8,7 +8,7 @@ class App extends React.Component {
         this.state = {
             alert: false,
             adminPost: false,
-            blogs: [1,2,3]
+            blogs: [1]
         }
     }
 
@@ -25,7 +25,7 @@ render(){
     var alertMessage = <p></p>
     var newPost = <p></p>
     if (this.state.alert === true){
-        alertMessage = <p class="alert1">Only administrators can make new blog posts!</p>
+        alertMessage = <h5 class="alert1">Only administrators can make new blog posts!</h5>
     } 
     if (this.state.adminPost === true) {
         newPost = <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">New Post</button>
@@ -38,21 +38,22 @@ render(){
                         ))}
                     </div>
                     <div class="rightcolumn">
-                        <div class="card">
-                            <h2>About Me</h2>
-                            <div class="fakeimg2">Image</div>
-                            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-                        </div>
-                        <div class="card">
-                            <h3>Popular Post</h3>
-                            <div class="fakeimg2">Image</div><br></br>
-                            <div class="fakeimg2">Image</div><br></br>
-                            <div class="fakeimg2">Image</div>
-                        </div>
-                        <div class="card">
+                        <div class="card2">
+                            <h3 class="subscribe">Subscribe to our Blog to Join the Discussion</h3><br></br>
                             <form action="/action_page.php">
-                                <input type="text" id="pword" placeholder="Admin Password..."></input><br></br><br></br>
-                                <button type="button" onClick={(e) => {e.preventDefault(); var txt = e.target.previousSibling.previousSibling.previousSibling.value; if (txt!=="PVTadmin1") {this.setState({alert: true});} else{this.setState({adminPost: true, alert: false})}}}>Admin Sign in</button><br></br><br></br>
+                                <input type="text" id="fname" placeholder="First Name"></input><br></br><br></br>
+                                <input type="text" id="lname" placeholder="Last Name"></input><br></br><br></br>
+                                <input type="text" id="email" placeholder="Email"></input><br></br><br></br><br></br>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Subscribe</button>
+                            </form><br></br>
+                        </div>
+                        <div class="card2">
+                        <h3 class="adminSignIn">Sign in as a Pivot Administrator to Create a New Blog Posts</h3><br></br>
+                            <form action="/action_page.php">
+                                <input type="text" id="Fname" placeholder="First Name"></input><br></br><br></br>
+                                <input type="text" id="Lname" placeholder="Last Name"></input><br></br><br></br>
+                                <input type="text" id="pword" placeholder="Admin Password..."></input><br></br><br></br><br></br>
+                                <button type="button" class="btn btn-info" onClick={(e) => {e.preventDefault(); var txt = e.target.previousSibling.previousSibling.previousSibling.previousSibling.value; console.log(txt); if (txt!=="PVTadmin1") {this.setState({alert: true, adminPost: false});} else{this.setState({adminPost: true, alert: false})}}}>Sign In To Make a Post</button><br></br><br></br>
                                 {newPost}
                             </form><br></br>
                             {alertMessage}

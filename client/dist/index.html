@@ -7,34 +7,40 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="styles.css" />
+  <style>
+    blockquote {
+font-style:italic;
+line-height:20px;
+font-size:15px;
+color: black;
+background: white;
+margin:10px;
+padding: 15px 20px 15px 20px;
+border-radius: 5px;
+border-width: 0px 0px 0px 0px;
+}
+blockquote:before,
+blockquote:after {
+position: relative;
+vertical-align: middle;
+font-family: 'Playfair Display', serif;
+font-size: 25px;
+font-weight: 700;
+line-height: 0;
+color: rgb(64, 193, 249);
+}
+blockquote:before {
+left: -5px;
+content: '\201C';
+}
+blockquote:after {
+content: '\201D';
+} 
+    </style>
   </head>
 </head>
 <body>
   <div id="app"></div>
-  
-     <!-- <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header</h4>
-          </div>
-          <div class="modal-body">
-            <form>
-              <input class="create-input" type="text"  placeholder="Post Title"></input>
-              <input class="create-input" type="text"  placeholder="Author"></input>
-              <input class="create-input" type="text"  placeholder="Image URL"></input>
-              <textarea class="create-body-textarea"  placeholder="Post Body"></textarea>
-              <button class="create-submit-button" onClick={(e) => {this.handleSubmit(e)}}>Save post</button>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>  -->
-  
   <script src="bundle.js" charset="utf-8"></script>
 </body>
 </html>

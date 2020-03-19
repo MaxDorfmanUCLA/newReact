@@ -26,7 +26,8 @@
     "@babel/preset-react": "^7.7.0",
     "babel-loader": "^8.0.6",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react-dom": "^16.11.0",
+    "surge": "^0.21.3"
   },
   "devDependencies": {
     "css-loader": "^3.2.0",
