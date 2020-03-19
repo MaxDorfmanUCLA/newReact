@@ -8,7 +8,7 @@
     "build": "webpack --mode production",
     "react-dev": "webpack -d --watch",
     "start": "live-server ./client/dist",
-    "deploy": "npm run build && mv build/index.html build/200.html && surge build"
+    "deploy": "npm run build && surge build"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
     "babel-loader": "^8.0.6",
+    "build": "^0.1.4",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "surge": "^0.21.3"

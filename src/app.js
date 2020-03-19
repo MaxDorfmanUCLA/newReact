@@ -28,7 +28,7 @@ render(){
         alertMessage = <h5 class="alert1">Only administrators can make new blog posts!</h5>
     } 
     if (this.state.adminPost === true) {
-        newPost = <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">New Post</button>
+        newPost = <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal2">New Post</button>
     }
     return  (<div>
                 <div class="row">
@@ -44,7 +44,7 @@ render(){
                                 <input type="text" id="fname" placeholder="First Name"></input><br></br><br></br>
                                 <input type="text" id="lname" placeholder="Last Name"></input><br></br><br></br>
                                 <input type="text" id="email" placeholder="Email"></input><br></br><br></br><br></br>
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal2">Subscribe</button>
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Subscribe</button>
                             </form><br></br>
                         </div>
                         <div class="card2">
@@ -67,10 +67,11 @@ render(){
           </div>
           <div class="modal-body">
             <form>
-              <input class="create-input" type="text" placeholder="Post Title"></input><br></br><br></br>
-              <input class="create-input" type="text" placeholder="Author"></input><br></br><br></br>
-              <input class="create-input" type="text" placeholder="Image URL"></input><br></br><br></br>
-              <textarea class="create-body-textarea" placeholder="Post Body"></textarea><br></br><br></br>
+              <input class="create-input" type="text" placeholder="First Name"></input><br></br><br></br>
+              <input class="create-input" type="text" placeholder="Last Name"></input><br></br><br></br>
+              <input class="create-input" type="text" placeholder="Username"></input><br></br><br></br>
+              <input class="create-input" type="text" placeholder="Password"></input><br></br><br></br>
+              <input class="create-input" type="text" placeholder="Confirm Password"></input><br></br><br></br>
               <button class="create-submit-button" onClick={(e) => {this.handleSubmit(e)}}>Sign Up</button>
             </form>
           </div>
