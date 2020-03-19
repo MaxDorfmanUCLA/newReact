@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
     "react-dev": "webpack -d --watch",
-    "start": "live-server ./client/dist"
+    "start": "live-server ./client/dist",
+    "deploy": "npm run build && mv build/index.html build/200.html && surge build"
   },
   "repository": {
     "type": "git",
