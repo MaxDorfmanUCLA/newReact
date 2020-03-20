@@ -6,7 +6,7 @@ class Post extends React.Component {
     
 render(){
     return  (<div class="card1">
-                <img class="blogImage" src="https://firststoragebucketmd.s3.amazonaws.com/sportsequipment.jpg"/><br></br>
+                <img class="blogImage" src="https://firststoragebucketmd.s3.amazonaws.com/emptyCourt.jpg"/><br></br>
                 <h3 class="blogTitle">The Sports Industry Stepped Up Big Time In Social Response To COVID-19</h3><br></br>
                 <h3 class="blogSubTitle">PIVOT CEO, Ben Shapiro discusses how the sports community lead by example in PIVOT's First Installment of "Thought Starters"</h3><br></br>
                 <h5 class="blogInfo">by PIVOT Agency | Ben Shapiro | Mar 18, 2020</h5><br></br>

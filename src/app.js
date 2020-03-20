@@ -37,7 +37,7 @@ render(){
                         <Post/>
                         ))}
                     </div>
-                    <div class="rightcolumn">
+                    {/* <div class="rightcolumn">
                         <div class="card2">
                             <h3 class="subscribe">Subscribe to our Blog to Join the Discussion</h3><br></br>
                             <form action="/action_page.php">
@@ -56,7 +56,7 @@ render(){
                             </form><br></br>
                             {alertMessage}
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div class="modal fade" id="myModal" role="dialog">
       <div class="modal-dialog modal-sm">
@@ -67,7 +67,7 @@ render(){
           </div>
           <div class="modal-body">
             <form>
-              <h5>Email: johndoe@gmail.com</h5><br></br><br></br>
+              {/* <h5>Email: johndoe@gmail.com</h5><br></br> */}
               <input class="create-input" type="text" placeholder="Username"></input><br></br><br></br>
               <input class="create-input" type="text" placeholder="Password"></input><br></br><br></br>
               <input class="create-input" type="text" placeholder="Confirm Password"></input><br></br><br></br>
