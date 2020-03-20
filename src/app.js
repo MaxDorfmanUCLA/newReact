@@ -51,7 +51,7 @@ render(){
                         <h3 class="adminSignIn">Sign in as a Pivot Administrator to Create a New Blog Posts</h3><br></br>
                             <form action="/action_page.php">
                                 <input type="text" id="pword" placeholder="Admin Password..."></input><br></br><br></br><br></br>
-                                <button type="button" class="btn btn-info" onClick={(e) => {e.preventDefault(); var txt = e.target.previousSibling.previousSibling.previousSibling.previousSibling.value; console.log(txt); if (txt!=="PVTadmin1") {this.setState({alert: true, adminPost: false});} else{this.setState({adminPost: true, alert: false})}}}>Sign In To Make a Post</button><br></br><br></br>
+                                <button id="sub1" type="button" class="btn btn-info" onClick={(e) => {e.preventDefault(); var txt = e.target.previousSibling.previousSibling.previousSibling.previousSibling.value; console.log(txt); if (txt!=="PVTadmin1") {this.setState({alert: true, adminPost: false});} else{this.setState({adminPost: true, alert: false})}}}>Sign In To Make a Post</button><br></br><br></br>
                                 {newPost}
                             </form><br></br>
                             {alertMessage}
@@ -59,7 +59,7 @@ render(){
                     </div>
                 </div>
                 <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog modal-lg">
+      <div class="modal-dialog modal-sm">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -67,8 +67,7 @@ render(){
           </div>
           <div class="modal-body">
             <form>
-              <input class="create-input" type="text" placeholder="First Name"></input><br></br><br></br>
-              <input class="create-input" type="text" placeholder="Last Name"></input><br></br><br></br>
+              <h5>Email: johndoe@gmail.com</h5><br></br><br></br>
               <input class="create-input" type="text" placeholder="Username"></input><br></br><br></br>
               <input class="create-input" type="text" placeholder="Password"></input><br></br><br></br>
               <input class="create-input" type="text" placeholder="Confirm Password"></input><br></br><br></br>

@@ -1,7 +1,11 @@
 body {
   font-family: Arial;
   padding: 20px;
-  background: #e9e6e6;
+  background: rgb(225, 225, 225);
+}
+
+.quote {
+  margin-top: -15px;
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -69,7 +73,7 @@ h5 {
   padding: 30px;
   margin-top: 20px;
   margin-right: 0px;
-  margin-left: 20px;
+  margin-left: 30px;
   width: 95%;
 }
 
@@ -77,29 +81,77 @@ h5 {
   
   padding: 20px;
   margin-top: 20px;
-  margin-right: 40px;
-  margin-left: -20px;
-  background-color: #aaa;
+  margin-right: 31px;
+  margin-left: -5px;
+  margin-bottom: 40px;
+  background-color: rgb(131, 131, 131);
 }
 
+.blogInfo {
+  margin-bottom: -20px;
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.blogTitle {
+  margin-top: 30px;
+  font-size: 28px;
+  margin-left: -5px;
+  margin-right: -25px;
+}
+
+.blogSubTitle {
+  margin-top: -25px;
+  margin-bottom: -15px;
+  font-size: 20px;
+  color: rgb(131, 131, 131);
+  margin-left: -5px;
+  margin-right: -25px;
+}
 
  .authorName {
   margin-left: 30px;
  }
 
+.quote {
+  margin-bottom: -5px;
+  margin-top: -15px;
+}
+
 .blogImage {
   width: 700px;
   height: 450px;
   margin-left: 100px;
-  margin-top: -20px;
+  margin-top: -30px;
 }
 
 .alert1 {
-  color: rgb(222, 28, 28);
+  color: rgb(230, 24, 24);
+  font-size: 17px;
+  margin-top: -20px;
 }
 
 .blogText {
-  color: rgb(120, 118, 118);
+  color: rgb(133, 131, 131);
+}
+
+.sincerely {
+  margin-left: 27px;
+  margin-top: -5px;
+  font-size: 17px;
+  font-style: italic;
+  border-radius: 5px;
+  border-width: 0px 0px 0px 0px;
+  color: black;
+}
+
+.authorName {
+  margin-left: 50px;
+  font-size: 17px;
+  font-style: italic;
+  border-radius: 5px;
+  border-width: 0px 0px 0px 0px;
+  color: black;
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
