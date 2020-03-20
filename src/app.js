@@ -33,6 +33,7 @@ render(){
     return  (<div>
                 <div class="row">
                     <div class="leftcolumn">
+                    <h3 class="blogTitle2">Blog</h3>
                     {this.state.blogs.map(item => (
                         <Post/>
                         ))}
